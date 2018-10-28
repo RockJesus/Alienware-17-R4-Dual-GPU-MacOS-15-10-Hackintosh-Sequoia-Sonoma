@@ -1,0 +1,36 @@
+Codec: Realtek ALC3266
+Address: 0
+AFG Function Id: 0x1 (unsol 1)
+Vendor Id: 0x10ec0298.          283902616
+Subsystem Id: 0x10280778
+Revision Id: 0x100103
+No Modem Function Group found
+
+
+
+
+Node 0x12  0xb7a60140: [Fixed] Mic at Oth Mobile-In。 12           pin wid 20/20  un 0/0.         01270720
+Node 0x13. 0x400c0000: [N/A] Line Out at Ext N/A
+Node 0x14. 0x411111f0: [N/A] Speaker at Ext Rear
+Node 0x17. 0x90170110: [Fixed] Speaker at Int N/A.    17 EAPD 0x2 pin wid 40. /0     0/0.        01740033
+Node 0x18. 0x411111f0: [N/A] Speaker at Ext Rear
+Node 0x19. 0x411111f0: [N/A] Speaker at Ext Rear
+Node 0x1a  0x03a11030: [Jack] Mic at Ext Left。       1a EAPD 0x2 pin wid 20  /20    09-85/09-85 01a70720
+Node 0x1d. 0x4076832d: [N/A] Modem Hand at Ext N/A
+Node 0x1e  0x411111f0: [N/A] Speaker at Ext Rear
+Node 0x1f. 0x411111f0: [N/A] Speaker at Ext Rear
+Node 0x21. 0x03211020: [Jack] HP Out at Ext Left。     21          pin wid 0   /c0    83/83      02170883
+
+
+Node 0x12  0xb7a60140: [Fixed] Mic at Oth Mobile-In. 内置麦克风 9-34-18 17-36-18
+Node 0x17. 0x90170110: [Fixed] Speaker at Int N/A.   内置扬声器 23-13-3
+Node 0x1a  0x03a11030: [Jack] Mic at Ext Left.       线路输入.  8-35-26 9-34-26 12-11-26
+Node 0x21. 0x03211020: [Jack] HP Out at Ext Left.    耳机扬声器 33-12-2
+
+<01271c40 01271d01 01271ea6 01271fb7 01771c10 01771d01 01771e17 01771f90 01a71c30 01a71d10 01a71ea1 01a71f03 02171c20 02171d10 02171e21 02171f03>
+
+
+耳机zayin pin control widget    01a70724
+
+HPqiehuan Unsolicited Response 021708
+Unsolicited: tag=01, enabled=1
