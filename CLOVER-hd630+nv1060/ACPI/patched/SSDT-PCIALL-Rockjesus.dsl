@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASL3z9uvp.aml, Sat Oct 27 12:42:15 2018
+ * Disassembly of iASLTshEkZ.aml, Fri Nov  2 19:31:48 2018
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000D58 (3416)
+ *     Length           0x00000D61 (3425)
  *     Revision         0x02
- *     Checksum         0x6E
+ *     Checksum         0x12
  *     OEM ID           "hack"
  *     OEM Table ID     "AW17-RJ"
  *     OEM Revision     0x00000000 (0)
@@ -22,22 +22,22 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.DPCH, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.HDEF, DeviceObj)
+    External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.I2C0.DFUD, DeviceObj)
-    External (_SB_.PCI0.IGPU, DeviceObj)
-    External (_SB_.PCI0.IMEI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.MCHC, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.HDAU, DeviceObj)
     External (_SB_.PCI0.PEG1.EGPU, DeviceObj)
     External (_SB_.PCI0.PEG2.TBLT, DeviceObj)
-    External (_SB_.PCI0.PMCR, DeviceObj)
+    External (_SB_.PCI0.PPMC, DeviceObj)
     External (_SB_.PCI0.RP01.PXSX, DeviceObj)
     External (_SB_.PCI0.RP05.ENET, DeviceObj)
     External (_SB_.PCI0.RP06.ARPT, DeviceObj)
     External (_SB_.PCI0.RP09.NVME, DeviceObj)
-    External (_SB_.PCI0.SATA, DeviceObj)
+    External (_SB_.PCI0.SAT0, DeviceObj)
     External (_SB_.PCI0.SBUS, DeviceObj)
     External (_SB_.PCI0.XHC_, DeviceObj)
 
@@ -224,64 +224,63 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
             }
         }
     }
-    
+
     Scope (_SB.PCI0.PEG0)
     {
         Device (HDAU)
         {
-            Name (_ADR, 0x00000001)  // _ADR: Address
-            
+            Name (_ADR, One)  // _ADR: Address
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-    {
-        If ((Arg2 == Zero))
-        {
-            Return (Buffer (One)
             {
-                 0x03                                             // .
-            })
-        }
+                If ((Arg2 == Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
+                }
 
-        Return (Package (0x0E)
-        {
-            "AAPL,slot-name", 
-            Buffer (0x0C)
-            {
-                "PCI-Express"
-            }, 
+                Return (Package (0x0E)
+                {
+                    "AAPL,slot-name", 
+                    Buffer (0x0C)
+                    {
+                        "PCI-Express"
+                    }, 
 
-            "device_type", 
-            Buffer (0x10)
-            {
-                "HDMI controller"
-            }, 
+                    "device_type", 
+                    Buffer (0x10)
+                    {
+                        "HDMI controller"
+                    }, 
 
-            "model", 
-            Buffer (0x28)
-            {
-                "NVIDIA GeForce GTX 1060 HDMI controller"
-            }, 
+                    "model", 
+                    Buffer (0x28)
+                    {
+                        "NVIDIA GeForce GTX 1060 HDMI controller"
+                    }, 
 
-            "name", 
-            "HDMI", 
-            "built-in", 
-            Buffer (0x04)
-            {
-                 0x01, 0x00, 0x00, 0x00                           // ....
-            }, 
+                    "name", 
+                    "HDMI", 
+                    "built-in", 
+                    Buffer (0x04)
+                    {
+                         0x01, 0x00, 0x00, 0x00                           // ....
+                    }, 
 
-            "vendor-id", 
-            Buffer (0x04)
-            {
-                 0xDE, 0x10, 0x00, 0x00                           // ....
-            }, 
+                    "vendor-id", 
+                    Buffer (0x04)
+                    {
+                         0xDE, 0x10, 0x00, 0x00                           // ....
+                    }, 
 
-            "device-id", 
-            Buffer (0x04)
-            {
-                 0xF1, 0x10, 0x00, 0x00                           // ....
+                    "device-id", 
+                    Buffer (0x04)
+                    {
+                         0xF1, 0x10, 0x00, 0x00                           // ....
+                    }
+                })
             }
-        })
-    }
         }
     }
 
@@ -323,7 +322,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
         })
     }
 
-    Method (_SB.PCI0.IGPU._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+    Method (_SB.PCI0.GFX0._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
     {
         If ((Arg2 == Zero))
         {
@@ -405,7 +404,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
         })
     }
 
-    Method (_SB.PCI0.IMEI._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+    Method (_SB.PCI0.HECI._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
     {
         If ((Arg2 == Zero))
         {
@@ -489,9 +488,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
         })
     }
 
-    
-
-    Method (_SB.PCI0.PMCR._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+    Method (_SB.PCI0.PPMC._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
     {
         If ((Arg2 == Zero))
         {
@@ -607,7 +604,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "AW17-RJ", 0x00000000)
         })
     }
 
-    Method (_SB.PCI0.SATA._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+    Method (_SB.PCI0.SAT0._DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
     {
         If ((Arg2 == Zero))
         {

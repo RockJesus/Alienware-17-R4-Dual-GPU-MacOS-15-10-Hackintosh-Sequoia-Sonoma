@@ -145,23 +145,9 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>ACAD ADP1</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					QUNBRA==
-					</data>
-					<key>Replace</key>
-					<data>
-					QURQMQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>ec0 ec</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					RUMwXw==
@@ -175,7 +161,7 @@
 					<key>Comment</key>
 					<string>h_ec ec</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SF9FQw==
@@ -201,20 +187,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					U0FUQQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>_DSM XDSM</string>
 					<key>Disabled</key>
 					<false/>
@@ -231,7 +203,7 @@
 					<key>Comment</key>
 					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SEVDSQ==
@@ -243,23 +215,9 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>PPMC PMCR</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					UFBNQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					UE1DUg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change GFX0 to IGPU</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					R0ZYMA==
@@ -283,6 +241,74 @@
 					QUxTMA==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_STA to XSTA in Device GPI0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					R1BJMA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_CRS to XCRS in Device TPD</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0NSUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					WENSUw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VFBEMA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R1BSVwI=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFBSVwI=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_PRT to XPRT in Device peg0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1BSVA==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFBSVA==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					UEVHMA==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -297,8 +323,6 @@
 		<false/>
 		<key>RenameDevices</key>
 		<dict>
-			<key>_SB.PCI0.PEG0.PEGP</key>
-			<string>GFX0</string>
 			<key>_SB.PCI0.PEG2.PEGP</key>
 			<string>TBLT</string>
 			<key>_SB.PCI0.RP01.PXSX</key>
@@ -382,7 +406,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>nvda_drv=1</string>
+		<string>-f nvda_drv=1 ngfxcompat=1 -v</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -471,6 +495,30 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
+		<key>Custom</key>
+		<dict>
+			<key>Entries</key>
+			<array>
+				<dict>
+					<key>Disabled</key>
+					<false/>
+					<key>Hidden</key>
+					<false/>
+					<key>Ignore</key>
+					<false/>
+					<key>Path</key>
+					<string>\EFI\RemixOS\grubx64.efi</string>
+					<key>Title</key>
+					<string>ANDROID</string>
+					<key>Type</key>
+					<string>Linux</string>
+					<key>Volume</key>
+					<string>HD(1,GPT,05B14329-D426-457A-88BD-D0442C58852A,0x1000,0x5DC000)</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
+				</dict>
+			</array>
+		</dict>
 		<key>Hide</key>
 		<array>
 			<string>preboot</string>
@@ -499,7 +547,7 @@
 		<key>ShowOptimus</key>
 		<false/>
 		<key>Theme</key>
-		<string>1</string>
+		<string>random</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -625,6 +673,24 @@
 				3hDxEA==
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable NVDARequiredOS</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				TlZEQVJlcXVpcmVkT1MA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>NVDAStartupWeb</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAAAAAAAA
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -647,7 +713,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02744609GUJ1JHA8</string>
+		<string>C02733501J9J1JHUE</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -677,9 +743,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
-		<string>C02VM7Z2HTD5</string>
+		<string>C02V70NQHTD5</string>
 		<key>SmUUID</key>
-		<string>F562E268-9890-4942-B242-36404C17F4CC</string>
+		<string>52D40AC6-B756-4723-A3AA-137038DFA2E2</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>

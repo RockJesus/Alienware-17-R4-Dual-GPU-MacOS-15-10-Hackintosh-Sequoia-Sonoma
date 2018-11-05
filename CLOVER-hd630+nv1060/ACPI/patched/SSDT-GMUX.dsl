@@ -21,15 +21,37 @@
 DefinitionBlock ("", "SSDT", 2, "hack", "GMUX", 0x00000000)
 {
     External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.GMUX, DeviceObj)
 
     Scope (_SB.PCI0.LPCB)
     {
         Device (GMUX)
-        {
-            Name (_HID, EisaId ("APP000B"))  // _HID: Hardware ID
-            Name (_CID, "gmux")  // _CID: Compatible ID
-            Name (_STA, 0x0B)  // _STA: Status
-        }
+                {
+                    Name (_HID, EisaId ("APP000B"))  // _HID: Hardware ID
+                    Name (_CID, "gmux")  // _CID: Compatible ID
+                    Name (_STA, 0x0B)  // _STA: Status
+                    Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+                    {
+                        IO (Decode16,
+                            0x0700,             // Range Minimum
+                            0x07FF,             // Range Maximum
+                            0x01,               // Alignment
+                            0xFF,               // Length
+                            )
+                    })
+                    Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+                    {
+                        
+
+                        Return (Package (0x02)
+                        {
+                            0x50, 
+                            0x03
+                        })
+                    }
+
+                    
+                }
     }
 }
 
