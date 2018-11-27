@@ -1,6 +1,7 @@
 # Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh
 
 http://bbs.pcbeta.com/viewthread-1797200-1-1.html
+https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpu-macos-mojave.263577/
 
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/30846964424404cb8b69890eb.jpg)
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/laptop-alienware-17-mlk-pdp-4.jpg)
@@ -121,6 +122,28 @@ Install
 	
 Post Install
 
+        •	HIDPI
+	
+	◦       Run script in Terminal:
+	
+	        sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
+		
+	•       Change ur own productid & vendorid in kext's info.plist
+	
+	◦        AppleMouseKeyboard.kext
+	
+                 Applesmcmotion.kext (KIOX device)
+		 
+                 UVC2FaceTimeHD.kext (cam)
+		 
+                 VoodooHDA.kext (nvidia hdmi controller id)
+		 
+        •	Nvidia webdriver
+	
+	◦        Run script in Terminal:
+	
+	         bash <(curl -s https://raw.githubusercontent.com/Benjamin-Dobell/nvidia-update/master/nvidia-update.sh)
+		 
 	•	Audio
 	
 	◦	ALC298: layout-id=11 https://github.com/acidanthera/AppleALC
@@ -135,6 +158,27 @@ Post Install
 	  
           
 	◦	Install Boom 3D APP to get better audio output
+	
+Change log:
+
+	•hdmi audio changed to hotpatch from dsdt patch
+	
+	•add usbports.kext
+	
+	•cpu pm 800-3800mhz
+	
+	•Add smcmotionsensor
+	
+	•Fixed BT issue by droping DMAR table
+	
+	•change virtualsmc to fakesmc for getting more sensors (Fan & nvidia temp)
+	
+	•Add intel & nvidia GPU PM
+	
+Dump request:
+
+I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & system report.spx , Any help will be appreciated!
+	
 
 *************** BUY ME A COFFEE *********************************************************
 ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg)
