@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.Rockjesus.AppleSMCMotionSensor</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleSMCMotionSensor</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>SMCMotionSensor</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.SMCMotionSensor</string>
+			<key>IOClass</key>
+			<string>SMCMotionSensor</string>
+			<key>IONameMatch</key>
+			<string>KIOX0095</string>
+			<key>IOProviderClass</key>
+			<string>IOService</string>
+			<key>IOUserClientClass</key>
+			<string>SMCMotionSensorClient</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

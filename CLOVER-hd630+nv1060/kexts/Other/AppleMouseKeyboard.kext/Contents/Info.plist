@@ -16,12 +16,10 @@
 	<string>1.0.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>Wired Keyboard Map-1</key>
+		<key>Wired Keyboard 2007 ANSI Map</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleHIDKeyboard</string>
-			<key>CapsLockDelay</key>
-			<integer>75</integer>
 			<key>DeviceUsagePairs</key>
 			<array>
 				<dict>
@@ -53,16 +51,14 @@
 			<string>AppleHIDKeyboardEventDriver</string>
 			<key>IOProviderClass</key>
 			<string>IOHIDInterface</string>
-			<key>NumLockKeyboardUsageMap</key>
-			<string>0x00070029,0x00070029,0x0007002a,0x0007002a,0x0007002b,0x0007002b,0x0007003a,0x0007003a,0x0007003b,0x0007003b,0x0007003c,0x0007003c,0x0007003d,0x0007003d,0x0007003e,0x0007003e,0x0007003f,0x0007003f,0x00070040,0x00070040,0x00070041,0x00070041,0x00070042,0x00070042,0x00070043,0x00070043,0x00070044,0x00070044,0x00070045,0x00070045,0x0007004a,0x0007004a,0x0007004b,0x0007004b,0x0007004c,0x0007004c,0x0007004d,0x0007004d,0x0007004e,0x0007004e,0x0007004f,0x0007004f,0x00070050,0x00070050,0x00070051,0x00070051,0x00070052,0x00070052,0x0007000d,0x00070059,0x0007000e,0x0007005a,0x0007000f,0x0007005b,0x00070018,0x0007005c,0x0007000c,0x0007005d,0x00070012,0x0007005e,0x00070024,0x0007005f,0x00070025,0x00070060,0x00070026,0x00070061,0x00070010,0x00070062,0x00070037,0x00070063,0x00070082,0x00070082,0x000700e0,0x000700e0,0x000700e1,0x000700e1,0x000700e2,0x000700e2,0x000700e3,0x000700e3,0x000700e4,0x000700e4,0x000700e5,0x000700e5,0x000700e6,0x000700e6,0x000700e7,0x000700e7</string>
 			<key>ProductID</key>
-			<integer>541</integer>
+			<integer>1328</integer>
 			<key>StandardType</key>
 			<integer>0</integer>
 			<key>VendorID</key>
-			<integer>1452</integer>
+			<integer>6268</integer>
 			<key>alt_handler_id</key>
-			<integer>43</integer>
+			<integer>46</integer>
 		</dict>
 		<key>Wireless Keyboard-2</key>
 		<dict>

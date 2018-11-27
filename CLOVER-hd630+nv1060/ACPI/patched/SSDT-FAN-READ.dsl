@@ -2,81 +2,92 @@
 
 // Copyright, black.dragon74 <www.osxlatitude.com>
 
-DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
-{
-    // Declare externals
-    External (\_SB.PCI0.LPCB.EC.ECAV, MethodObj)
-    External (\_SB.PCI0.LPCB.EC.ECPU, FieldUnitObj)
-    External (\_SB.PCI0.LPCB.EC.ST83, MethodObj)
-    External (\_SB.PCI0.LPCB.EC.TACH, MethodObj)
+// fan/temperature readings only (fan behavior is BIOS)
 
-    // Create devices required by FakeSMC_ACPISensors
+DefinitionBlock("", "SSDT", 2, "hack", "_FANREAD", 0)
+{
+    External(\_SB.PCI0, DeviceObj)
+    External(\_SB.PCI0.LPCB, DeviceObj)
+    External(\_SB.PCI0.LPCB.EC, DeviceObj)
+    External(\_SB.PCI0.LPCB.EC.ECMX, MutexObj)
+    External(\_SB.PCI0.LPCB.EC.FAMX, MutexObj)
+    External(\_SB.PCI0.LPCB.EC.CRZN, FieldUnitObj)
+    External(\_SB.PCI0.LPCB.EC.ERIB, FieldUnitObj)
+    External(\_SB.PCI0.LPCB.EC.TEMP, FieldUnitObj)
+    External(\_SB.PCI0.LPCB.EC.FRDC, FieldUnitObj)
+    External(\_SB.PCI0.LPCB.EC.DTMP, FieldUnitObj)    
+    External(\_SB.PCI0.LPCB.EC.ERBD, FieldUnitObj)  
+    External(\_SB.PCI0.LPCB.EC.ECRG, IntObj)
+
+    // This is created by 04c_FanSpeed.txt
     Device (SMCD)
     {
-        Name (_HID, "FAN00000") // Required, DO NOT change
-        
-        // Add tachometer
+        Name (_HID, "FAN00000") // _HID: Hardware ID
+        // ACPISensors.kext configuration
         Name (TACH, Package()
         {
-            "System Fan", "FAN0"
+            "System Fan", "FANG",
+            "Graphic Fan", "FAN1",
         })
-        
-        // Add CPU heatsink
         Name (TEMP, Package()
         {
-            "CPU Heatsink", "TCPU"
+            "CPU Heatsink", "TCPU",
+            "Ambient", "TAMB",
+            "Mainboard", "TSYS",
+            "CPU Proximity", "TCPP",
         })
-        
-        // Method to read FAN RPM (tachometer)
-        Method (FAN0, 0)
+        // Actual methods to implement fan/temp readings/control
+        Method (FANG, 0, Serialized)
         {
-            // Check is EC is ready
-            If (\_SB.PCI0.LPCB.EC.ECAV())
-            {
-                Local0 = \_SB.PCI0.LPCB.EC.ST83(0) // Method ST83 acquires mutex and writes value to EC. O stands for FAN 1, Use 1 for FAN 2
-                If (Local0 == 255)
-                {
-                    // If ST83 is 0xFF (Max fan speed) terminate by returning FAN RPM
-                    Return (Local0)
-                }
-                // Else, Get RPM and store it in Local0
-                Local0 = \_SB.PCI0.LPCB.EC.TACH(0) // Method TACH in DSDT returns current FAN RPM in 100s, Arg0 as 0 is for FAN 1, for FAN 2, use Arg0 as 1
-                    
-            }
-            Else
-            {
-                // Terminate, return Zero
-                Local0 = 0
-            }
-            
-            // Return 255, 0 or Fan RPM based on conditionals above
-            Return (Local0)  
+            Acquire (\_SB.PCI0.LPCB.EC.FAMX, 0xFFFF)
+                \_SB.PCI0.LPCB.EC.ERIB = 0x03
+                Local0 = \_SB.PCI0.LPCB.EC.ERBD /* \_SB_.PCI0.LPCB.EC__.ERBD */
+                Release (\_SB.PCI0.LPCB.EC.FAMX)
+                Return (Local0)
         }
-        
-        // Method to read CPU temp (CPU Heatsink)
-        Method (TCPU, 0)
+        Method (FAN1, 0, Serialized)
         {
-            // Check if EC is ready
-            If (\_SB.PCI0.LPCB.EC.ECAV())
-            {
-                // Then
-                Local0 = \_SB.PCI0.LPCB.EC.ECPU // EC Field storing current CPU temp
-                Local1 = 60 // From DSDT
-                
-                If (Local0 < 128)
-                {
-                    Local1 = Local0
-                }
-                
-            }
-            Else
-            {
-                // Terminate, return Zero
-                Local1 = 0
-            }
-        
-            // Return final CPU temp. ACPISensors take care of unit conversion.
-            Return (Local1)
+            If (!\_SB.PCI0.LPCB.EC.ECRG) { Return(0) }
+            Local0 = \_SB.PCI0.LPCB.EC.FRDC
+            If (Local0) { Local0 = (0x3C000 + (Local0 >> 1)) / Local0 }
+            If (0x03C4 == Local0) { Return (0) }
+            Return (Local0)
+        }
+        Method (TCPU, 0, Serialized)
+        {
+            If (!\_SB.PCI0.LPCB.EC.ECRG) { Return(0) }
+            Acquire (\_SB.PCI0.LPCB.EC.ECMX, 0xFFFF)
+            \_SB.PCI0.LPCB.EC.CRZN = 1
+            Local0 = \_SB.PCI0.LPCB.EC.DTMP
+            Release (\_SB.PCI0.LPCB.EC.ECMX)
+            Return (Local0)
+        }
+        Method (TCPP, 0, Serialized)
+        {
+            If (!\_SB.PCI0.LPCB.EC.ECRG) { Return(0) }
+            Acquire (\_SB.PCI0.LPCB.EC.ECMX, 0xFFFF)
+            \_SB.PCI0.LPCB.EC.CRZN = 1
+            Local0 = \_SB.PCI0.LPCB.EC.DTMP
+            Release (\_SB.PCI0.LPCB.EC.ECMX)
+            Return (Local0)
+        }
+        Method (TSYS, 0, Serialized)
+        {
+            If (!\_SB.PCI0.LPCB.EC.ECRG) { Return(0) }
+            Acquire (\_SB.PCI0.LPCB.EC.ECMX, 0xFFFF)
+            \_SB.PCI0.LPCB.EC.CRZN = 1
+            Local0 = \_SB.PCI0.LPCB.EC.DTMP
+            Release (\_SB.PCI0.LPCB.EC.ECMX)
+            Return (Local0)
+        }
+        Method (TAMB, 0, Serialized)
+        {
+            If (!\_SB.PCI0.LPCB.EC.ECRG) { Return(0) }
+            Acquire (\_SB.PCI0.LPCB.EC.ECMX, 0xFFFF)
+            \_SB.PCI0.LPCB.EC.CRZN = 4
+            Local0 = \_SB.PCI0.LPCB.EC.TEMP
+            Release (\_SB.PCI0.LPCB.EC.ECMX)
+            Return (Local0)
         }
     }
-}    
+}

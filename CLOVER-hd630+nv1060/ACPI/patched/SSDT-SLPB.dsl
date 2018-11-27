@@ -20,15 +20,14 @@
  */
 DefinitionBlock ("", "SSDT", 2, "hack", "SLPB", 0x00000000)
 {
-    External (_SB_, DeviceObj)
+    
 
-    Scope (_SB)
-    {
-        Device (SLPB)
+    
+        Device (_SB.SLPB)
         {
             Name (_HID, EisaId ("PNP0C0E") /* Sleep Button Device */)  // _HID: Hardware ID
             Name (_STA, 0x0B)  // _STA: Status
         }
-    }
+    
 }
 

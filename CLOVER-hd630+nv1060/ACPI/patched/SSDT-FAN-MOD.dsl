@@ -7,11 +7,11 @@
 DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
 {
     // Declare externals
-    External (\_SB.PCI0.LPCB.EC.ECAV, MethodObj)
-    External (\_SB.PCI0.LPCB.EC.ECPU, FieldUnitObj)
-    External (\_SB.PCI0.LPCB.EC.ST83, MethodObj)
-    External (\_SB.PCI0.LPCB.EC.ST98, MethodObj)
-    External (\_SB.PCI0.LPCB.EC.TACH, MethodObj)
+    External (\_SB.PCI0.LPCB.EC0.ECAV, MethodObj)
+    External (\_SB.PCI0.LPCB.EC0.ECPU, FieldUnitObj)
+    External (\_SB.PCI0.LPCB.EC0.ST83, MethodObj)
+    External (\_SB.PCI0.LPCB.EC0.ST98, MethodObj)
+    External (\_SB.PCI0.LPCB.EC0.TACH, MethodObj)
 
 
     // Create a Nick's device to take care of this SSDT's configurations
@@ -42,16 +42,16 @@ DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
         Method (FAN0, 0)
         {
             // Check is EC is ready
-            If (\_SB.PCI0.LPCB.EC.ECAV())
+            If (\_SB.PCI0.LPCB.EC0.ECAV())
             {
-                Local0 = \_SB.PCI0.LPCB.EC.ST83(0) // Method ST83 acquires mutex and writes value to EC. O stands for FAN 1, Use 1 for FAN 2
+                Local0 = \_SB.PCI0.LPCB.EC0.ST83(0) // Method ST83 acquires mutex and writes value to EC. O stands for FAN 1, Use 1 for FAN 2
                 If (Local0 == 255)
                 {
                     // If ST83 is 0xFF (Max fan speed) terminate by returning FAN RPM
                     Return (Local0)
                 }
                 // Else, Get RPM and store it in Local0
-                Local0 = \_SB.PCI0.LPCB.EC.TACH(0) // Method TACH in DSDT returns current FAN RPM in 100s, Arg0 as 0 is for FAN 1, for FAN 2, use Arg0 as 1
+                Local0 = \_SB.PCI0.LPCB.EC0.TACH(0) // Method TACH in DSDT returns current FAN RPM in 100s, Arg0 as 0 is for FAN 1, for FAN 2, use Arg0 as 1
                     
             }
             Else
@@ -68,10 +68,10 @@ DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
         Method (TCPU, 0)
         {
             // Check if EC is ready
-            If (\_SB.PCI0.LPCB.EC.ECAV())
+            If (\_SB.PCI0.LPCB.EC0.ECAV())
             {
                 // Then
-                Local0 = \_SB.PCI0.LPCB.EC.ECPU // EC Field storing current CPU temp
+                Local0 = \_SB.PCI0.LPCB.EC0.ECPU // EC Field storing current CPU temp
                 Local1 = 60 // From DSDT
                 
                 If (Local0 < 128)
@@ -132,12 +132,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
             }
             
             // If EC is not ready, terminate
-            If (!\_SB.PCI0.LPCB.EC.ECAV())
+            If (!\_SB.PCI0.LPCB.EC0.ECAV())
             {
                 Return (0)
             }    
                 
-            Local5 = \_SB.PCI0.LPCB.EC.ECPU // Current temperature of the CPU Heatsink
+            Local5 = \_SB.PCI0.LPCB.EC0.ECPU // Current temperature of the CPU Heatsink
             If (Local5 < 128)
             {
                 Local0 = Local5 // Store temperature in Local0
@@ -220,7 +220,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "fan", 0)
                     
                     // Method 2 (Works but not recommended) Uncomment the line below to use this (remember to comment lines in method 1)
                     
-                    \_SB.PCI0.LPCB.EC.ST98 (DerefOf(FTA2[Local2]))
+                    \_SB.PCI0.LPCB.EC0.ST98 (DerefOf(FTA2[Local2]))
                     
                     // End Method 2
                     
