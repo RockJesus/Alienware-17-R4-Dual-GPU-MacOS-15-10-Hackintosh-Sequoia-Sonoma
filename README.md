@@ -1,6 +1,7 @@
 # Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh
 
 http://bbs.pcbeta.com/viewthread-1797200-1-1.html
+
 https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpu-macos-mojave.263577/
 
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/30846964424404cb8b69890eb.jpg)
@@ -132,11 +133,11 @@ Post Install
 	
 	◦        AppleMouseKeyboard.kext
 	
-                 Applesmcmotion.kext (KIOX device)
+        ◦         Applesmcmotion.kext (KIOX device)
 		 
-                 UVC2FaceTimeHD.kext (cam)
+        ◦        UVC2FaceTimeHD.kext (cam)
 		 
-                 VoodooHDA.kext (nvidia hdmi controller id)
+        ◦        VoodooHDA.kext (nvidia hdmi controller id)
 		 
         •	Nvidia webdriver
 	
