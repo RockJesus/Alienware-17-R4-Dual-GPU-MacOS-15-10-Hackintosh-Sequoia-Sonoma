@@ -149,9 +149,17 @@ Post Install
 	
 	◦	ALC298: layout-id=11 https://github.com/acidanthera/AppleALC
 	
-	◦	Headphone/Headset volume ALCplugfix:
+	◦	Headphone/Headset volume ALCplugfix(deprecated):
 	
           cd alc_fix 
+	  
+          chmod +x install.sh 
+	  
+          ./install.sh 
+	  
+        ◦	Headphone/Headset volume fix Combojack(newway):
+	
+          cd ComboJack 
 	  
           chmod +x install.sh 
 	  
@@ -175,6 +183,10 @@ Change log:
 	•change virtualsmc to fakesmc for getting more sensors (Fan & nvidia temp)
 	
 	•Add intel & nvidia GPU PM
+	
+	•alcplugfix seems not working on 10.14,changed to verstub(combojack) for headset fix
+	
+	•smbios=mbp15,1
 	
 Dump request:
 
