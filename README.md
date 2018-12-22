@@ -188,6 +188,8 @@ Change log:
 	
 	•smbios=mbp15,1
 	
+	•New released lilu & whatevergeen etc,No need to hotpatch hdmi audio any more,but still need voodoohda to make hdmi audio work
+	
 Dump request:
 
 I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & system report.spx , Any help will be appreciated!
