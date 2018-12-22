@@ -283,7 +283,7 @@
 					<key>Comment</key>
 					<string>_PRT to XPRT in Device peg0</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X1BSVA==
@@ -718,7 +718,7 @@
 				<key>Comment</key>
 				<string>DP/HDMI patch</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				3hAaDg==

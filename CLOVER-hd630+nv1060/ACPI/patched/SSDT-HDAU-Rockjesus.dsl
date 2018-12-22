@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASL3OWSRN.aml, Sun Nov 11 10:10:38 2018
+ * Disassembly of iASLNq8uKZ.aml, Sat Dec 22 09:52:16 2018
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000008D (141)
+ *     Length           0x000000B5 (181)
  *     Revision         0x02
- *     Checksum         0xE2
+ *     Checksum         0x0C
  *     OEM ID           "hack"
  *     OEM Table ID     "HDAU"
  *     OEM Revision     0x00000000 (0)
@@ -23,8 +23,8 @@ DefinitionBlock ("", "SSDT", 2, "hack", "HDAU", 0x00000000)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.NHDA, UnknownObj)
     External (_SB_.PCI0.PEG0.PEGP.NHDA, FieldUnitObj)
-    External (PICM, UnknownObj)
     External (AR01, UnknownObj)
+    External (PICM, UnknownObj)
     External (PR01, UnknownObj)
 
     Scope (_SB.PCI0.PEG0)
@@ -33,11 +33,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "HDAU", 0x00000000)
         {
             ^PEGP.NHDA = One
             If (PICM)
-                    {
-                        Return (AR01) /* \_SB_.AR01 */
-                    }
+            {
+                Return (AR01) /* External reference */
+            }
 
-                    Return (PR01) /* \_SB_.PR01 */
+            Return (PR01) /* External reference */
         }
     }
 }
