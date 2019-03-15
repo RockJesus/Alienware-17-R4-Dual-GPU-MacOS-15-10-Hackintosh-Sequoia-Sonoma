@@ -247,7 +247,7 @@
 					<key>Comment</key>
 					<string>_STA to XSTA in Device GPI0</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X1NUQQ==
@@ -265,7 +265,7 @@
 					<key>Comment</key>
 					<string>_CRS to XCRS in Device TPD</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0NSUw==
@@ -386,12 +386,14 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>NoDynamicExtract</key>
 			<false/>
 			<key>NoOemTableId</key>
 			<false/>
+			<key>PluginType</key>
+			<string>1</string>
 			<key>UseSystemIO</key>
 			<false/>
 		</dict>
@@ -464,6 +466,8 @@
 		<string>0x0201</string>
 		<key>#UseARTFrequency</key>
 		<true/>
+		<key>HWPEnable</key>
+		<true/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -482,6 +486,13 @@
 		<false/>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>
+				CwAAAA==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -529,7 +540,7 @@
 			<key>FixOwnership</key>
 			<false/>
 			<key>HighCurrent</key>
-			<false/>
+			<true/>
 			<key>Inject</key>
 			<false/>
 			<key>NameEH00</key>
@@ -564,6 +575,8 @@
 				</dict>
 			</array>
 		</dict>
+		<key>CustomIcons</key>
+		<false/>
 		<key>Hide</key>
 		<array>
 			<string>preboot</string>
@@ -576,6 +589,8 @@
 			<key>Enabled</key>
 			<true/>
 		</dict>
+		<key>PlayAsync</key>
+		<false/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -585,7 +600,7 @@
 			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
