@@ -1,15 +1,17 @@
 # Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh
 
-http://bbs.pcbeta.com/viewthread-1797200-1-1.html
+[中文版](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/README.md)|||[English](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/README.md)
 
-https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpu-macos-mojave.263577/
+# http://bbs.pcbeta.com/viewthread-1797200-1-1.html
+
+# https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpu-macos-mojave.263577/
 
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/30846964424404cb8b69890eb.jpg)
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/laptop-alienware-17-mlk-pdp-4.jpg)
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/BD9A110F-8366-4FAC-8C43-74A93A43A533.png)
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-28%20%E4%B8%8B%E5%8D%884.03.16.png)
 
-My hardware
+# My hardware
 
 	•	Alienware 17 R4
 	
@@ -33,7 +35,7 @@ My hardware
 	
  
 
-BIOS Configuration
+# BIOS Configuration
 
 	•	SATA MODE AHCI
 	
@@ -43,7 +45,7 @@ BIOS Configuration
 	
  
  
-Overview
+# Overview
 
 I've got dual-gpu working good on 10.13.6,Now just waiting for the webdriver for 10.14.
 
@@ -54,7 +56,7 @@ I've got dual-gpu working good on 10.13.6,Now just waiting for the webdriver for
   2.nvidia gpu only mode:Indisplay & Exdisplay both connects to nvidia 1060
   
 
-What Works
+# What Works
 
 	•	CPU Power Management
 	
@@ -93,7 +95,7 @@ What Works
 	•	Sleep & Wake (only power button could wakeup system)
 	
 	
-What Doesn't Work
+# What Doesn't Work
 
 	•	Keyboard & mouse wakeup sysytem
 	
@@ -106,7 +108,7 @@ What Doesn't Work
 	•	Trackpad light (Bios touchpad backlight=auto with no light ,but Bios touchpad backlight=on with light always on)
 	
 	
-What Needs Improvement
+# What Needs Improvement
 
 	•	Backlight auto adjust (ALS0 device)
 	
@@ -117,11 +119,11 @@ What Needs Improvement
 	•	Things under "What Doesn't Work"
 	
 
-Install
+# Install
 
 	•	If you can't see install partition try to press F3 on clover boot screen
 	
-Post Install
+# Post Install
 
         •	HIDPI
 	
@@ -168,7 +170,7 @@ Post Install
           
 	◦	Install Boom 3D APP to get better audio output
 	
-Change log:
+# Change log:
 
 	•hdmi audio changed to hotpatch from dsdt patch
 	
@@ -190,11 +192,11 @@ Change log:
 	
 	•New released lilu & whatevergeen etc,No need to hotpatch hdmi audio any more,but still need voodoohda to make hdmi audio work
 	
-Dump request:
+# Dump request:
 
 I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & system report.spx , Any help will be appreciated!
 	
 
-*************** BUY ME A COFFEE *********************************************************
+# *************** BUY ME A COFFEE *********************************************************
 ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg)
 ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/zfb.jpeg)
