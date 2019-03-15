@@ -199,5 +199,6 @@ I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & sys
 	
 
 # *************** BUY ME A COFFEE *********************************************************
-![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg)
-![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/zfb.jpeg)
+| 支付宝                                                                                                                                                              | 微信                                               |
+| ----------------------------------------------------------   | ---------------------------------------------------- |
+| ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/zfb.jpeg) | ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg) | 
