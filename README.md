@@ -196,9 +196,17 @@ I've got dual-gpu working good on 10.13.6,Now just waiting for the webdriver for
 # Dump request:
 
 I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & system report.spx , Any help will be appreciated!
-	
 
-# *************** BUY ME A COFFEE *********************************************************
+# All other Alienware models: https://github.com/RockJesus/Alienware-Hackintosh
+
+# My blog: https://rockjesus.github.io/
+
+| 外星人黑苹果QQ群：308469644                                                                                                                                                              | 
+| ----------------------------------------------------------   | 
+| ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/qq.png?raw=true) |
+
+
+# *************** BUY ME A COFFEE ***************
 | 支付宝                                                                                                                                                              | 微信                                               |
 | ----------------------------------------------------------   | ---------------------------------------------------- |
 | ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/zfb.jpeg) | ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg) | 
