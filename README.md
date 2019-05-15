@@ -1,6 +1,6 @@
 # Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh
 
-[![Platform](https://img.shields.io/badge/platform-macOS-red.svg)](https://developer.apple.com/macos)
+[![Platform](https://img.shields.io/badge/platform-macOS-red.svg)](https://developer.apple.com/macos) [![img](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/) 
 
 [中文版](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/README.md)|||[English](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/README.md)
 
