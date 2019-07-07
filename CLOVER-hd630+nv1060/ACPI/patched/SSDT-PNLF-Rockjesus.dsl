@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20180810 (64-bit version)
- * Copyright (c) 2000 - 2018 Intel Corporation
+ * AML/ASL+ Disassembler version 20190215 (64-bit version)
+ * Copyright (c) 2000 - 2019 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLLjzCVP.aml, Fri Oct 12 15:11:18 2018
+ * Disassembly of iASL15aYbM.aml, Mon Apr  8 11:50:31 2019
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000005C (92)
+ *     Length           0x0000006A (106)
  *     Revision         0x02
- *     Checksum         0x56
+ *     Checksum         0x65
  *     OEM ID           "hack"
  *     OEM Table ID     "PNLF"
  *     OEM Revision     0x00000000 (0)

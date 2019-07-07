@@ -109,7 +109,7 @@
 				<key>FixMutex</key>
 				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixRegions</key>
 				<false/>
 				<key>FixS3D</key>
@@ -409,7 +409,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>-f -v nvda_drv=1 keepsyms=1 debug=0x100 ngfxcompat=1 -no_compat_check</string>
+		<string>nvda_drv=1 keepsyms=1 debug=0x100 ngfxcompat=1 -no_compat_check</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -600,7 +600,7 @@
 			<key>Linux</key>
 			<false/>
 			<key>Tool</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
@@ -633,6 +633,25 @@
 		<false/>
 		<key>KernelPm</key>
 		<true/>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>15</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AIXAD4SHAAAASQ==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>
+				AIXAkJCQkJCQSQ==
+				</data>
+			</dict>
+		</array>
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
