@@ -6,7 +6,7 @@
 
 # http://bbs.pcbeta.com/viewthread-1797200-1-1.html
 
-# https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpu-macos-mojave.263577/
+# https://www.tonymacx86.com/threads/guide-alienware-17-r4-dual-gpus-macos-hackintosh.285405/
 
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/30846964424404cb8b69890eb.jpg)
 ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/tony/laptop-alienware-17-mlk-pdp-4.jpg)
