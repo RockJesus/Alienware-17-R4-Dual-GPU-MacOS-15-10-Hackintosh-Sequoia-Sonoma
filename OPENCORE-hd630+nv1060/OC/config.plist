@@ -26,12 +26,6 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-IRQ.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
 			</dict>
 			<dict>
@@ -41,19 +35,69 @@
 				<string>SSDT-PNLF.aml</string>
 			</dict>
 		</array>
-		<key>Block</key>
+		<key>Patch</key>
 		<array>
 			<dict>
-				<key>All</key>
-				<false/>
+				<key>Comment</key>
+				<string>ec0ec</string>
+				<key>Count</key>
+				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
+				<key>Find</key>
+				<data>
+				RUMwXw==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				RUNfXw==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
-				<key>TableSignature</key>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>rtc</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
 				<data>
-				RE1BUg==
+				oAqTU1RBUwE=
 				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				oAqRCv8L//8=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -61,12 +105,42 @@
 			<key>FadtEnableReset</key>
 			<false/>
 			<key>NormalizeHeaders</key>
-			<false/>
+			<true/>
 			<key>RebaseRegions</key>
 			<false/>
 			<key>ResetHwSig</key>
 			<false/>
 			<key>resetLogoStatus</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>Booter</key>
+	<dict>
+		<key>Quirks</key>
+		<dict>
+			<key>AvoidRuntimeDefrag</key>
+			<true/>
+			<key>DevirtualiseMmio</key>
+			<false/>
+			<key>DisableSingleUser</key>
+			<false/>
+			<key>DisableVariableWrite</key>
+			<true/>
+			<key>DiscardHibernateMap</key>
+			<false/>
+			<key>EnableSafeModeSlide</key>
+			<true/>
+			<key>EnableWriteUnprotector</key>
+			<true/>
+			<key>ForceExitBootServices</key>
+			<false/>
+			<key>ProtectCsmRegion</key>
+			<false/>
+			<key>ProvideCustomSlide</key>
+			<true/>
+			<key>SetupVirtualMap</key>
+			<true/>
+			<key>ShrinkMemoryMap</key>
 			<false/>
 		</dict>
 	</dict>
@@ -108,6 +182,16 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VirtualSMC.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VirtualSMC</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -271,16 +355,6 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>RTCMemoryFixup.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RTCMemoryFixup</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>SMCBatteryManager.kext</string>
 				<key>Enabled</key>
 				<true/>
@@ -349,16 +423,6 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>VirtualSMC.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VirtualSMC</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>VoodooHDA.kext</string>
 				<key>Enabled</key>
 				<true/>
@@ -379,17 +443,41 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>VoodooPS2Keyboard.kext</string>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooPS2Keyboard</string>
+				<string>Contents/MacOS/VoodooPS2Trackpad</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>VoodooPS2Mouse.kext</string>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext.dSYM</string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext.dSYM</string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext.dSYM</string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -399,11 +487,11 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>VoodooPS2Trackpad.kext</string>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooPS2Trackpad</string>
+				<string>Contents/MacOS/VoodooPS2Keyboard</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -437,6 +525,124 @@
 				<string>com.apple.driver.AppleTyMCEDriver</string>
 			</dict>
 		</array>
+		<key>Patch</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				dS4Ptg==
+				</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleRTC</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				6y4Ptg==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				dTMPtw==
+				</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleRTC</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>MaxKernel</key>
+				<string>18.5.0</string>
+				<key>MinKernel</key>
+				<string>18.5.0</string>
+				<key>Replace</key>
+				<data>
+				6zMPtw==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string>_AcpiOsVprintf</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleACPIPlatform</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>MaxKernel</key>
+				<string>18.5.0</string>
+				<key>MinKernel</key>
+				<string>18.5.0</string>
+				<key>Replace</key>
+				<data>
+				ww==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string>__ZN11BCM5701Enet14getAdapterInfoEv</string>
+				<key>Comment</key>
+				<string>Broadcom BCM57785 patch</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				6AAA//9miYMABQAA
+				</data>
+				<key>Identifier</key>
+				<string>com.apple.iokit.AppleBCM5701Ethernet</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				/wAA////////////
+				</data>
+				<key>Replace</key>
+				<data>
+				uLQWAABmiYMABQAA
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+		</array>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
@@ -454,6 +660,8 @@
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
+			<false/>
+			<key>PowerTimeoutKernelPanic</key>
 			<false/>
 			<key>ThirdPartyTrim</key>
 			<false/>
@@ -475,12 +683,14 @@
 			<string>None</string>
 			<key>HideSelf</key>
 			<true/>
+			<key>PollAppleHotKeys</key>
+			<false/>
 			<key>Resolution</key>
-			<string></string>
+			<string>1920×1080</string>
 			<key>ShowPicker</key>
 			<true/>
 			<key>Timeout</key>
-			<integer>8</integer>
+			<integer>5</integer>
 			<key>UsePicker</key>
 			<true/>
 		</dict>
@@ -495,10 +705,25 @@
 			<key>Target</key>
 			<integer>19</integer>
 		</dict>
+		<key>Entries</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Not signed for security reasons</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Name</key>
+				<string>CustomOS</string>
+				<key>Path</key>
+				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+			</dict>
+		</array>
 		<key>Security</key>
 		<dict>
+			<key>AllowNvramReset</key>
+			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>2</integer>
+			<integer>3</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>RequireSignature</key>
@@ -506,7 +731,7 @@
 			<key>RequireVault</key>
 			<false/>
 			<key>ScanPolicy</key>
-			<integer>983299</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -546,10 +771,10 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v keepsyms=1</string>
+				<string>-v -no_compat_check ngfxcompat=1</string>
 				<key>csr-active-config</key>
 				<data>
-				AAAAAA==
+				5wMAAA==
 				</data>
 				<key>nvda_drv</key>
 				<data>
@@ -561,8 +786,19 @@
 				</data>
 			</dict>
 		</dict>
+		<key>Block</key>
+		<dict>
+			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
+			<array>
+				<string>UIScale</string>
+			</array>
+			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+			<array>
+				<string>boot-args</string>
+			</array>
+		</dict>
 		<key>LegacyEnable</key>
-		<false/>
+		<true/>
 		<key>LegacySchema</key>
 		<dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
@@ -574,6 +810,8 @@
 				<string>SystemAudioVolumeDB</string>
 				<string>bluetoothActiveControllerInfo</string>
 				<string>bluetoothInternalControllerInfo</string>
+				<string>efi-boot-device</string>
+				<string>efi-boot-device-data</string>
 				<string>flagstate</string>
 				<string>fmm-computer-name</string>
 				<string>nvda_drv</string>
@@ -628,14 +866,14 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro14,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VN6Y2HTD5</string>
+			<string>C02W6GY4HTD5</string>
 			<key>SystemUUID</key>
-			<string>F7E57190-4ABE-4D9C-B66E-EB67CC8FABCE</string>
+			<string>1AA528C2-9114-4FD3-A408-6FD3F9D93F87</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02745403CDJ1JH8C</string>
+			<string>C02805101QXJ1JHFB</string>
 			<key>ROM</key>
 			<data>
 			ESIzAAAA
@@ -645,18 +883,18 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro14,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VN6Y2HTD5</string>
+			<string>C02W6GY4HTD5</string>
 			<key>SystemUUID</key>
-			<string>F7E57190-4ABE-4D9C-B66E-EB67CC8FABCE</string>
+			<string>1AA528C2-9114-4FD3-A408-6FD3F9D93F87</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
 			<key>FirmwareFeatures</key>
-			<string>3FE10FFC 00000000</string>
+			<string>7EE10FFC 00000000</string>
 			<key>FirmwareFeaturesMask</key>
-			<string>3FFF1FFF 00000000</string>
+			<string>7FFF1FFF 00000000</string>
 			<key>MLB</key>
-			<string>C02745403CDJ1JH8C</string>
+			<string>C02805101QXJ1JHFB</string>
 			<key>ROM</key>
 			<data>
 			ESIzAAAA
@@ -665,11 +903,11 @@
 		<key>SMBIOS</key>
 		<dict>
 			<key>BIOSReleaseDate</key>
-			<string>05/28/2019</string>
+			<string>09/13/2019</string>
 			<key>BIOSVendor</key>
 			<string></string>
 			<key>BIOSVersion</key>
-			<string>196.0.0.0.0</string>
+			<string>202.0.0.0.0</string>
 			<key>BoardAssetTag</key>
 			<string></string>
 			<key>BoardLocationInChassis</key>
@@ -679,7 +917,7 @@
 			<key>BoardProduct</key>
 			<string>Mac-551B86E5744E2388</string>
 			<key>BoardSerialNumber</key>
-			<string>C02745403CDJ1JH8C</string>
+			<string>C02805101QXJ1JHFB</string>
 			<key>BoardType</key>
 			<integer>10</integer>
 			<key>BoardVersion</key>
@@ -689,15 +927,15 @@
 			<key>ChassisManufacturer</key>
 			<string></string>
 			<key>ChassisSerialNumber</key>
-			<string>C02VN6Y2HTD5</string>
+			<string>C02W6GY4HTD5</string>
 			<key>ChassisType</key>
 			<integer>9</integer>
 			<key>ChassisVersion</key>
 			<string>Mac-551B86E5744E2388</string>
 			<key>FirmwareFeatures</key>
-			<string>3FE10FFC 00000000</string>
+			<string>7EE10FFC 00000000</string>
 			<key>FirmwareFeaturesMask</key>
-			<string>3FFF1FFF 00000000</string>
+			<string>7FFF1FFF 00000000</string>
 			<key>MemoryFormFactor</key>
 			<string></string>
 			<key>PlatformFeature</key>
@@ -717,9 +955,9 @@
 			<key>SystemSKUNumber</key>
 			<string>Mac-551B86E5744E2388</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VN6Y2HTD5</string>
+			<string>C02W6GY4HTD5</string>
 			<key>SystemUUID</key>
-			<string>F7E57190-4ABE-4D9C-B66E-EB67CC8FABCE</string>
+			<string>1AA528C2-9114-4FD3-A408-6FD3F9D93F87</string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
@@ -738,26 +976,67 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>AppleUiSupport.efi</string>
-			<string>AptioInputFix.efi</string>
 			<string>ApfsDriverLoader.efi</string>
-			<string>AptioMemoryFix.efi</string>
+			<string>MemoryAllocation.efi</string>
+			<string>FwRuntimeServices.efi</string>
+			<string>EmuVariableRuntimeDxe.efi</string>
+			<string>VBoxHfs.efi</string>
 			<string>UsbKbDxe.efi</string>
 			<string>VirtualSmc.efi</string>
+			<string>AppleGenericInput.efi</string>
+			<string>AppleUiSupport.efi</string>
+			<string>AptioInputFix.efi</string>
 		</array>
+		<key>Input</key>
+		<dict>
+			<key>KeyForgetThreshold</key>
+			<integer>5</integer>
+			<key>KeyMergeThreshold</key>
+			<integer>2</integer>
+			<key>KeySupport</key>
+			<true/>
+			<key>KeySupportMode</key>
+			<string>Auto</string>
+			<key>KeySwap</key>
+			<false/>
+			<key>PointerSupport</key>
+			<false/>
+			<key>PointerSupportMode</key>
+			<string>ASUS</string>
+			<key>TimerResolution</key>
+			<integer>50000</integer>
+		</dict>
 		<key>Protocols</key>
 		<dict>
 			<key>AppleBootPolicy</key>
 			<false/>
-			<key>ConsoleControl</key>
+			<key>AppleEvent</key>
 			<false/>
+			<key>AppleImageConversion</key>
+			<false/>
+			<key>AppleKeyMap</key>
+			<false/>
+			<key>AppleUserInterfaceTheme</key>
+			<false/>
+			<key>ConsoleControl</key>
+			<true/>
 			<key>DataHub</key>
 			<false/>
 			<key>DeviceProperties</key>
 			<false/>
+			<key>FirmwareVolume</key>
+			<false/>
+			<key>HashServices</key>
+			<false/>
+			<key>UnicodeCollation</key>
+			<false/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>AvoidHighAlloc</key>
+			<false/>
+			<key>ClearScreenOnModeSwitch</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
@@ -767,13 +1046,15 @@
 			<key>ProvideConsoleControl</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
-			<false/>
+			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
+			<key>ReplaceTabWithSpace</key>
+			<false/>
 			<key>RequestBootVarRouting</key>
-			<false/>
+			<true/>
 			<key>SanitiseClearScreen</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 </dict>

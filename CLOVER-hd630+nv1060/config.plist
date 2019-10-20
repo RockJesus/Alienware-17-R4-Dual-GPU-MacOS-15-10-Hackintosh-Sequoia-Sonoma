@@ -476,12 +476,14 @@
 			<key>#Inject</key>
 			<string>0x0887</string>
 			<key>AFGLowPowerState</key>
-			<false/>
+			<true/>
 			<key>Inject</key>
 			<string>No</string>
 			<key>ResetHDA</key>
-			<false/>
+			<true/>
 		</dict>
+		<key>IntelMaxValue</key>
+		<string>0xFFFF</string>
 		<key>LANInjection</key>
 		<false/>
 		<key>Properties</key>
@@ -654,6 +656,8 @@
 				<string>Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem</string>
 			</dict>
 		</dict>
+		<key>SetIntelMaxBacklight</key>
+		<true/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -751,6 +755,10 @@
 		<false/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>\System\Library\Extensions\AppleHDA.kext</string>
+		</array>
 		<key>KernelCpu</key>
 		<false/>
 		<key>KernelLapic</key>
@@ -916,21 +924,25 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>ROM</key>
+		<data>
+		8JiMRKVF
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/28/2018</string>
+		<string>05/28/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP151.88Z.F000.B00.1809280842</string>
+		<string>MBP143.88Z.F000.B00.1905281616</string>
 		<key>Board-ID</key>
-		<string>Mac-937A206F2EE63C01</string>
+		<string>Mac-551B86E5744E2388</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02821501GUJP4FAD</string>
+		<string>C02825310GUJ1JHAD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -942,11 +954,11 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.200.252.0.0</string>
+		<string>196.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFC0FE13F</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -958,16 +970,22 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro15,1</string>
+		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
-		<string>C02WR0FBKGYG</string>
+		<string>C02WWZY5HTD5</string>
 		<key>SmUUID</key>
-		<string>1AEDF289-28A9-4BAE-8CF2-BD8E7C5ECEDD</string>
+		<string>B10ABBD3-4C32-4CD5-B668-6550F844A545</string>
+		<key>Trust</key>
+		<true/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string>CD2B173C-AE9B-543C-BDCE-8BE7A7FE89BE</string>
+		<key>ExposeSysVariables</key>
+		<true/>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
