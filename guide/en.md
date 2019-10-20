@@ -133,12 +133,9 @@ I really need a dump of real Macbookpro 14,3's full acpi dsdt/ssdt & IOREG & sys
 >**Updates on my github:https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh**
 
 
-| 外星人黑苹果QQ群：308469644                                                                                                                                                              | 
-| ----------------------------------------------------------   | 
-| ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/qq.png?raw=true) |
+# 如果文章对你有帮助，欢迎打赏作者,欢迎加入我的QQ群 
+# If u like, Buy me a coffee & JOIN US :)
+| 外星人黑苹果QQ群：308469644                                                                                                                                                              | 支付宝打赏                                                                                                                                                              | 微信打赏                                                                                                                                                              |  微信赞赏                                                                                                                                                              | 
+| ----------------------------------------------------------   | ----------------------------------------------------------   | ----------------------------------------------------------   |  ----------------------------------------------------------   | 
+| ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh/blob/master/qq.png?raw=true) | ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/zfb.jpeg) | ![image](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra/blob/master/wx.jpeg) | ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-10.15-14-13-Hackintosh/blob/master/zsm.png?raw=true) |
 
-
-# 如果文章对你有帮助，欢迎打赏作者. If u like, Buy me a coffee  :)
-| 支付宝                                                                                                                                                              | 微信                                               |
-| ----------------------------------------------------------   | ---------------------------------------------------- |
-| ![image](/img/zfb.png) | ![image](/img/wx.png) | 
