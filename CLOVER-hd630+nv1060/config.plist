@@ -247,7 +247,7 @@
 					<key>Comment</key>
 					<string>_STA to XSTA in Device GPI0</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					X1NUQQ==
@@ -265,7 +265,7 @@
 					<key>Comment</key>
 					<string>_CRS to XCRS in Device TPD</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					X0NSUw==
@@ -409,7 +409,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>nvda_drv=1 keepsyms=1 debug=0x100 ngfxcompat=1 -no_compat_check alcid=11</string>
+		<string>nvda_drv=1 ngfxcompat=1 -no_compat_check alcid=11</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -812,7 +812,7 @@
 				<key>Comment</key>
 				<string>Disable AppleIntelLpssI2C (credit by Coolstar)</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				SU9LaXQ=
@@ -830,7 +830,7 @@
 				<key>Comment</key>
 				<string>Disable AppleIntelLpssI2CCOntroller (credit by Coolstar)</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				SU9LaXQ=
@@ -926,23 +926,23 @@
 		<string>0x67</string>
 		<key>ROM</key>
 		<data>
-		8JiMRKVF
+		DZ3MsGMZ
 		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>05/28/2019</string>
+		<string>09/13/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP143.88Z.F000.B00.1905281616</string>
+		<string>MBP143.88Z.F000.B00.1909131925</string>
 		<key>Board-ID</key>
 		<string>Mac-551B86E5744E2388</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02825310GUJ1JHAD</string>
+		<string>C02753404GUJ1JHCB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -954,13 +954,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>196.0.0.0.0</string>
+		<string>202.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE13F</string>
+		<string>0xFC0FE17E</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFF1FFF7F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
@@ -972,9 +972,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
-		<string>C02WWZY5HTD5</string>
+		<string>C02W1KYBHTD5</string>
 		<key>SmUUID</key>
-		<string>B10ABBD3-4C32-4CD5-B668-6550F844A545</string>
+		<string>A0CDEA9B-6F4A-4A92-9D6D-EEDEDFB06319</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -983,9 +983,7 @@
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>CD2B173C-AE9B-543C-BDCE-8BE7A7FE89BE</string>
-		<key>ExposeSysVariables</key>
-		<true/>
+		<string>62113853-FFAC-42CB-8066-834C406F9DCE</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
