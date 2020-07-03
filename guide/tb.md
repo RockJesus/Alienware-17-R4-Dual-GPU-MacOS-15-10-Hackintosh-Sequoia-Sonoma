@@ -44,6 +44,9 @@ https://www.tonymacx86.com/threads/usb-c-hotplug-not-working.223534/
 https://www.tonymacx86.com/threads/usb-c-hotplug-questions.211313/
 https://github.com/gunslinger23/XPS15-9560-High-Sierra/tree/master/CLOVER/ACPI/patched
 https://github.com/wmchris/DellXPS15-9550-OSX/tree/10.13/10.13/Advanced/DSDT-HotPatches/Patches
+
+
+
 | 微信圈子                                                                                                                                                              | 微信小程序                                                                                                                                                              | 微信公众号                                                                                                                                                                                                                                                                                                                            | 
 | ----------------------------------------------------------   | ----------------------------------------------------------   | ----------------------------------------------------------   |  
 | ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-10.15-14-13-Hackintosh/blob/master/tony/%E5%BE%AE%E4%BF%A1%E5%9C%88%E5%AD%90.jpeg?raw=true) | ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-10.15-14-13-Hackintosh/blob/master/tony/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F.png?raw=true) | ![image](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-10.15-14-13-Hackintosh/blob/master/tony/微信公众号.jpg) | 
