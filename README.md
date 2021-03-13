@@ -8,7 +8,7 @@
 
 
 ![laptop-alienware-17-mlk-pdp-4](https://user-images.githubusercontent.com/23656651/111027153-5f294d80-8429-11eb-9922-f1768ec1244b.jpg)
-![BD9A110F-8366-4FAC-8C43-74A93A43A533](https://user-images.githubusercontent.com/23656651/111027143-52a4f500-8429-11eb-95a9-ff90ee07b3b5.png)
+![截屏2021-03-13 下午6 26 56](https://user-images.githubusercontent.com/23656651/111027208-baf3d680-8429-11eb-9a47-2bfbc1ca5c02.png)
 <img width="906" alt="屏幕快照 2018-10-28 下午4 03 16" src="https://user-images.githubusercontent.com/23656651/111027158-67818880-8429-11eb-811c-0d40a11eb3cd.png">
 
 
