@@ -1,4 +1,4 @@
-# Alienware-17-R4-Dual-GPU-MacOS-Mojave-10.14-Hackintosh
+# Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh
 
 [![Platform](https://img.shields.io/badge/platform-macOS-red.svg)](https://developer.apple.com/macos) [![img](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/) 
 ![4B60C9FDBD5609483647B96771E8D795](https://user-images.githubusercontent.com/23656651/111026999-6ef46200-8428-11eb-9076-f0840727946a.png)
