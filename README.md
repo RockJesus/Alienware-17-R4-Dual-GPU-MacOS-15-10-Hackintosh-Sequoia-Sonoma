@@ -26,7 +26,7 @@
  [![wx](https://img.shields.io/badge/打赏-微信-green.svg)](https://gitee.com/rockjesus/rockjesus/raw/master/img/wx.png)
  [![zsm](https://img.shields.io/badge/打赏-赞赏码-yellow.svg)](https://gitee.com/rockjesus/rockjesus/raw/master/img/zsm.png)
  [![Gitter](https://badges.gitter.im/Alienware-hackintosh/community.svg)](https://gitter.im/Alienware-hackintosh/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
- [![download-badge](https://img.shields.io/github/downloads/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/total.svg?style=for-the-badge&logo=DocuSign "Download status")](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/releases/latest "Download status")
+ [![download-badge](https://img.shields.io/github/downloads/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/total.svg?logo=DocuSign "Download status")](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/releases/latest "Download status")
 
 
 
