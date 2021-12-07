@@ -4,7 +4,7 @@
 [![4B60C9FDBD5609483647B96771E8D795](https://user-images.githubusercontent.com/23656651/111026999-6ef46200-8428-11eb-9076-f0840727946a.png)](https://rockjesus.cn)
 
 ### Welcome 🛸  to Alienware 👽  Hackintosh 🍎  外星人 💻  黑苹果  🖥  by [RockJesus.cn](https://rockjesus.cn) [![qq](https://img.shields.io/badge/Blog-RockJesus-silver.svg?logo=Blogger)](https://rockjesus.cn)  
-[![qq](http://r1o2otara.hd-bkt.clouddn.com/17r4.gif)](https://rockjesus.cn)
+[![qq](https://cdn.jsdelivr.net/gh/rockjesus/img/img/17r4.gif)](https://rockjesus.cn)
  [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=RockJesus&count_private=true&include_all_commits=true&show_icons=true&theme=nightowl&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)](https://rockjesus.cn)
  
 [![Hardware](https://img.shields.io/badge/Hardware-Alienware-silver.svg?logo=Hackaday)](https://alienware.com) [![Platform](https://img.shields.io/badge/platform-MacOS10/12-red.svg?logo=apple)](https://developer.apple.com/macos) [![Platform](https://img.shields.io/badge/platform-Windows11-blue.svg?logo=windows)](https://www.microsoft.com/en-us/windows/) 
@@ -30,7 +30,7 @@
 [![forks](https://img.shields.io/github/forks/RockJesus/alienware-hackintosh.svg?logo=Analogue&color=orange)](https://github.com/RockJesus)
   [![download-badge](https://img.shields.io/github/downloads/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/total.svg?logo=DocuSign "Download status")](https://github.com/RockJesus/Alienware-17-R4-Dual-GPU-MacOS-12-11-10-Hackintosh/releases/latest "Download status")
 
-[![qq](http://r1o2otara.hd-bkt.clouddn.com/foot.gif)](https://rockjesus.cn)
+[![qq](https://cdn.jsdelivr.net/gh/rockjesus/img/img/foot.gif)](https://rockjesus.cn)
 
 
 
